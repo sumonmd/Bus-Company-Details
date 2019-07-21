@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h1 class="title">All Buses List In BanglaDesh</h1>
+    <a class="button is-success" href="/create">Add new bus</a>
+    <ul>
+        {% for bus in buses %}
+            {% include 'buses/partials/bus.html' %}
+        {% endfor %}
+    </ul>
+{% endblock %}
